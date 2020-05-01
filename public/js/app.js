@@ -22,7 +22,8 @@ const fetchingData = (location) => {
         response.json().then((data) => {
 
             if (data.error) {
-                return message1.textContent = data.error;
+                message1.textContent = data.error;
+                return;
             }
 
             message1.textContent = data.location;
